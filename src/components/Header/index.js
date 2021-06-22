@@ -5,9 +5,11 @@ import { Navbar } from './styles';
 export default function Header () {
   return (
     <Navbar>
-      <h1>Chronos</h1>
-      <button>Começar</button>
-      <button>Entrar</button>
+      <h1>CHRONOS</h1>
+      <div>
+        <button className="signup">Começar</button>
+        <button className="login">Acessar</button>
+      </div>
     </Navbar>
   );
 };
