@@ -36,6 +36,7 @@ export const Navbar = styled.header`
       color: ${colors.white};
       border: none;
       transition: 0.7s;
+      z-index: 1;
 
       :hover {
         opacity: 0.95;
