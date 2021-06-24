@@ -35,16 +35,15 @@ export const Navbar = styled.header`
       font-weight: 700;
       color: ${colors.white};
       border: none;
-      transition: 0.7s;
+      transition: 0.3s;
       z-index: 1;
 
       :hover {
         opacity: 0.95;
-        -webkit-transform: scale(1.05);
-        -ms-transform: scale(1.05);
         transform: scale(1.05);
       }
       :active {
+        transition: 0.001s;
         opacity: 0.7;
       }
     }
