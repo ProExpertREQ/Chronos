@@ -12,7 +12,7 @@ export const Container = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: -0.5rem 0 0 5rem;
+    margin-left: 5rem;
     background-color: ${colors.white};
     border-radius: 50%;
     width: 33rem;
@@ -24,15 +24,17 @@ export const Container = styled.section`
       margin: 0;
     }
 
-    .small-1{
+    .slogan-1 {
       font-size: 4.5rem;
     }
-    .small-2{
-      font-size: 3.5rem;
-    }
-    .large {
+    
+    .slogan-2 {
       margin: -2rem;
       font-size: 6rem;
+    }
+    
+    .slogan-3 {
+      font-size: 3.5rem;
     }
   }
 
@@ -57,15 +59,14 @@ export const Container = styled.section`
       font-weight: 700;
       color: ${colors.white};
       border: none;
-      transition: 0.7s;
+      transition: 0.3s;
 
       :hover {
         opacity: 0.95;
-        -webkit-transform: scale(1.05);
-        -ms-transform: scale(1.05);
         transform: scale(1.05);
       }
       :active {
+        transition: 0.001s;
         opacity: 0.7;
       }
   }
