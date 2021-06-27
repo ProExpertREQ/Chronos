@@ -2,7 +2,7 @@ import React from 'react';
 
 import Header from './Header';
 import Home from './Home';
-import ReadMore from './ReadMore'
+import Features from './Features'
 import Footer from './Footer';
 
 import GlobalStyle from './styles/global';
@@ -13,8 +13,8 @@ function App() {
       <GlobalStyle />
       <Header />
       <Home />
-      <ReadMore />
-      <Footer />
+      <Features />
+      <Footer /> 
     </>
   );
 };
