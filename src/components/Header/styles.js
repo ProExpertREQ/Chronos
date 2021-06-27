@@ -6,53 +6,80 @@ export const Navbar = styled.header`
   background: ${colors.main};
   display: flex;
   justify-content: space-between;
-  padding: 0 5%;
-  height: 7rem;
+  align-items: center;
+  padding: 0 5rem;
+  padding-top: 2rem;
 
   h1 {
-    font-size: 2.5rem;
+    margin: 0 0 -0.5rem 0;
+    font-size: 1.9rem;
     font-weight: 700;
     color: ${colors.dark};
-    width: 100%;
+    cursor: default;
+
+    ::-moz-selection {
+      color: ${colors.dark};
+      background: transparent;
+    }
+  
+    ::selection {
+      color: ${colors.dark};
+      background: transparent;
+    } 
   }
 
   div {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
+    align-items: stretch;
 
     button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-left: 1rem;
-      width: 11.6rem;
-      height: 3.4rem;
+      padding: 0.4rem 3rem;
       border-radius: 0.9rem;
       font-family: 'Baloo Tamma 2', cursive;
-      font-size: 1.5rem;
       font-weight: 700;
+      font-size: 1.5rem;
       color: ${colors.white};
       border: none;
       transition: 0.3s;
-      z-index: 1;
 
       :hover {
-        opacity: 0.95;
         transform: scale(1.05);
+        cursor: pointer;
+        color: ${colors.dark};
       }
-      :active {
-        transition: 0.001s;
-        opacity: 0.7;
+
+      & + button {
+        margin-left: 1.5rem;
       }
+
+      ::-moz-selection {
+        color: ${colors.white};
+        background: transparent;
+      }
+  
+      ::selection {
+        color: ${colors.white};
+        background: transparent;
+      } 
     }
 
     .signup {
-        background-color: ${colors.yellow};
-    }
+      background-color: ${colors.yellow};
+
+      :active {
+        transition: 0.001s;
+        background-color: ${colors.dark};
+        color: ${colors.white};
+      }
+  }
     .login {
-        background-color: ${colors.light};
+      background-color: ${colors.light};
+      
+      :active {
+        transition: 0.001s;
+        background-color: ${colors.dark};
+        color: ${colors.white};
+      }
     }
   }
 `;

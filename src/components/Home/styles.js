@@ -3,71 +3,95 @@ import styled from 'styled-components';
 import colors from '../styles/colors';
 
 export const Container = styled.section`
+  background-color: ${colors.main};
   display: flex;
   justify-content: space-between;
-  background-color: ${colors.main};
+  align-items: center;
+  padding: 0 5rem;
 
-  .circle {
+  .item {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 5rem;
-    background-color: ${colors.white};
-    border-radius: 50%;
-    width: 33rem;
-    height: 33rem;
-    color: ${colors.main};
-    font-weight: 800;
 
-    p {
-      margin: 0;
-    }
-
-    .slogan-1 {
-      font-size: 4.5rem;
+    .item-1 {
+      margin-top: -2.5rem;
+      font-size: 3.8rem;
     }
     
-    .slogan-2 {
+    .item-2 {
       margin: -2rem;
-      font-size: 6rem;
+      font-size: 5rem;
     }
     
-    .slogan-3 {
-      font-size: 3.5rem;
+    .item-3 {
+      font-size: 3rem;
     }
   }
 
+  p {
+    margin: 0;
+    color: ${colors.white};
+    font-weight: 800;
+    text-align: center;
+    cursor: default;    
+
+    ::-moz-selection {
+      color: ${colors.white};
+      background: transparent;
+    }
+  
+    ::selection {
+      color: ${colors.white};
+      background: transparent;
+    }
+  } 
+
   img {
-    position: relative;
-    top: -4.5rem;
-    width: 45rem;
-    height: 45rem;
+    max-width: 37rem;
+    height: auto;
+    padding-left: 2.5rem;
+
+    ::-moz-selection {
+      background: transparent;
+    }
+  
+    ::selection {
+      background: transparent;
+    } 
   }
 
   button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-left: 1rem;
-      width: 11.6rem;
-      height: 3.4rem;
-      border-radius: 0.9rem;
-      background-color: ${colors.dark};
-      font-family: 'Baloo Tamma 2', cursive;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: ${colors.white};
-      border: none;
-      transition: 0.3s;
+    padding: 0.4rem 3rem;
+    border-radius: 0.9rem;
+    background-color: ${colors.dark};
+    font-family: 'Baloo Tamma 2', cursive;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: ${colors.white};
+    border: none;
+    transition: 0.3s;
 
-      :hover {
-        opacity: 0.95;
-        transform: scale(1.05);
-      }
-      :active {
-        transition: 0.001s;
-        opacity: 0.7;
-      }
+    :hover {
+      transform: scale(1.05);
+      cursor: pointer;
+      background-color: ${colors.yellow};
+      color: ${colors.dark};
+    }
+
+    :active {
+      transition: 0.001s;
+      background-color: ${colors.dark};
+      color: ${colors.white};
+    }   
+
+    ::-moz-selection {
+      color: ${colors.white};
+      background: transparent;
+    }
+  
+    ::selection {
+      color: ${colors.white};
+      background: transparent;
+    } 
   }
 `;
