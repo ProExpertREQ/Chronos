@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Container } from './styles';
 
-import GithubIcon from '../../../../../public/img/github.svg';
+import GithubIcon from '../../../../../public/img/github-icon.svg';
 
 export default function Footer () {
   return(
