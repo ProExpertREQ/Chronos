@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Container } from './styles';
-import Illustration from '../../../../public/img/illustration.svg';
+import Illustration from '../../../../public/img/studying.svg';
 
 import Header from './Header';
 import Features from './Features';
