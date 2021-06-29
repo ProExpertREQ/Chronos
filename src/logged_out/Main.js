@@ -1,9 +1,15 @@
 import React from 'react';
 
-import Home from './components/Home';
+import NavBar from './NavBar';
+import Home from './Home';
+import Footer from './Footer';
 
 export default function Main () {
   return (
-    <Home />
+    <>
+      <NavBar />
+      <Home />
+      <Footer />
+    </>
   );
 }
