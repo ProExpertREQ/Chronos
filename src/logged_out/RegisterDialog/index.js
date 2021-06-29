@@ -1,34 +1,28 @@
 import React, { useState } from 'react';
 
-import { Modal } from './styles';
+import Modal from '../Modal';
+import { Button } from './styles';
 
-const RegisterDialog = () => {
+const RegisterDialog = ({onClose = () => {}}) => {
   return (
-    <Modal>
-      <div className="container">
-        <div className="header">
-          <h3>Registre-se</h3>
-          <p>X</p>
-        </div>
-        <div id="form">
-          <label htmlFor="name">Nome</label>
-          <input type="text" name="name" id="name" placeholder="Nome"/>
+    <Modal title="Registrar" onClose={onClose}>
+      <label htmlFor="name">Nome</label>
+      <input type="text" name="name" id="name" placeholder="Nise da Silveira" />
 
-          <label htmlFor="email">E-mail</label>
-          <input type="text" name="email" id="email" />
+      <label htmlFor="email">E-mail</label>
+      <input type="text" name="email" id="email" placeholder="exemplo@exemplo.com" />
 
-          <label htmlFor="registration-number">Matrícula</label>
-          <input type="text" name="registration-number" id="registration-number" />
+      <label htmlFor="registration-number">Matrícula</label>
+      <input type="text" name="registration-number" id="registration-number" placeholder="21/0419620" />
 
-          <label htmlFor="password">Senha</label>
-          <input type="password" name="password" id="password" />
-          
-          <label htmlFor="password-confirm">Confirmar Senha</label>
-          <input type="password" name="password-confirm" id="password-confirm" />
-          
-          <button id="register">Registrar-se</button>
-        </div>
-      </div>
+      <label htmlFor="password">Senha</label>
+      <input type="password" name="password" id="password" placeholder="Crie uma senha" />
+
+      <label htmlFor="password-confirm">Confirmar Senha</label>
+      <input type="password" name="password-confirm" id="password-confirm" placeholder="Confirme a senha" />
+
+      <label id="button-label">Button</label>
+      <Button id="register">Registrar-se</Button>
     </Modal>
   );
 }
