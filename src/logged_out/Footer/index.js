@@ -2,7 +2,8 @@ import React from 'react';
 
 import { Container } from './styles';
 
-import GithubIcon from '../../../../../public/img/github-icon.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 export default function Footer () {
   return(
@@ -15,7 +16,7 @@ export default function Footer () {
         </p>
 
         <button>
-          <img src={GithubIcon} alt="Github" />
+          <FontAwesomeIcon icon={faGithub} />
           <p>Nosso Repositório</p>
         </button>
       </div>

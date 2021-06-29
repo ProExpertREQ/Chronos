@@ -54,13 +54,13 @@ export const Container = styled.footer`
       }
 
       :hover {
-        opacity: 0.95;
         transform: scale(1.05);
         cursor: pointer;
+        background-color: ${colors.yellow}
       }
       :active {
         transition: 0.001s;
-        opacity: 0.7;
+        background-color: ${colors.dark};
       }
       ::-moz-selection {
         color: ${colors.white};
@@ -69,10 +69,14 @@ export const Container = styled.footer`
       ::selection {
         color: ${colors.white};
         background: transparent;
-      }
-      img {
-        margin-right: 1rem;
       } 
+      svg {
+        font-weight: 700;
+        font-size: 2rem;
+        margin-right: .5rem;
+        color: ${colors.white};
+        font-family: 'Baloo Tamma 2', cursive;
+      }
     }
   }
 `;
