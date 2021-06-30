@@ -43,7 +43,7 @@ const Modal = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: .2rem 1rem;
+      padding: 0;
       color: ${colors.dark};
       font-size: 2rem;
       font-weight: 500;
@@ -63,6 +63,7 @@ const Modal = styled.div`
   #form {
     display: flex;
     flex-direction: column;
+    width: 100%;
 
     label {
       font-size: .9rem;
@@ -72,14 +73,19 @@ const Modal = styled.div`
     }
 
     input { 
-      width: 23.4rem;
       border: none;
       border-radius: .3rem;
-      background-color: #D4EEEF;
+      border: 1px solid ${colors.main};
       font-family: 'Baloo Tamma 2', cursive;
       font-size: 1.3rem;
       color: ${colors.dark};
       padding: .2rem 1rem;
+
+      :focus {
+        outline: none;
+        border: 2px solid ${colors.main};
+        box-shadow: 0 0 3px ${colors.main};
+      }
     }
 
     #button-label {
