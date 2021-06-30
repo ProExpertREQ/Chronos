@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 
 import ModalStyled from './styles';
 
@@ -6,6 +6,11 @@ const Modal = ({ title="", id="modal", onClose = () => {}, children }) => {
   const handleOutsideClick = (e) => {
     if(e.target.id === id) onClose();
   }
+
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return ()=> document.body.style.overflow = 'unset';
+  }, []);
 
   return (
     <ModalStyled id={id} onClick={handleOutsideClick}>
