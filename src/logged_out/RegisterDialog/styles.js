@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import colors from '../../styles/colors';
 
-export const Button = styled.button`
+const Button = styled.button`
   border-radius: .3rem !important;
   font-size: 1.5rem !important;
   color: ${colors.white};
@@ -26,5 +26,7 @@ export const Button = styled.button`
   ::selection {
     color: ${colors.white};
     background: transparent;
-  } 
+  }
 `;
+
+export default Button;

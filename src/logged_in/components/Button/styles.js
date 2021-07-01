@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
-import colors from './styles/colors';
-
-export const Container = styled.button`
-  /* padding: .3rem 3rem;
-  border-radius: 0.9rem;        transform: scale(1.05);
+const Container = styled.button`
+  padding: .3rem 3rem;
+  border-radius: 0.9rem;
+  transform: scale(1.05);
   cursor: pointer;
   font-family: 'Baloo Tamma 2', cursive;
   font-weight: 700;
@@ -27,5 +26,7 @@ export const Container = styled.button`
 
   ::selection {
     background: transparent;
-  }  */
+  }
 `;
+
+export default Container;

@@ -1,13 +1,17 @@
 import React from 'react';
 
-import { Container } from './styles';
+import PropTypes from 'prop-types';
 
-export default function Button (props) {
-  return(
-    <Container
-      onClick={() => {}}
-    >
-      {props.title}
+import Container from './styles';
+
+export default function Button({ title }) {
+  return (
+    <Container onClick={() => {}}>
+      {title}
     </Container>
   );
 }
+
+Button.propTypes = {
+  title: PropTypes.string.isRequired,
+};

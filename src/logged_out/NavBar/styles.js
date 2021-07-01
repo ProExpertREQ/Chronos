@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import colors from '../../styles/colors';
 
-export const Container = styled.header`
+const Container = styled.header`
   background: ${colors.main};
   display: flex;
   justify-content: space-between;
@@ -21,11 +21,11 @@ export const Container = styled.header`
       color: ${colors.dark};
       background: transparent;
     }
-  
+
     ::selection {
       color: ${colors.dark};
       background: transparent;
-    } 
+    }
   }
 
   div {
@@ -56,11 +56,11 @@ export const Container = styled.header`
         color: ${colors.white};
         background: transparent;
       }
-  
+
       ::selection {
         color: ${colors.white};
         background: transparent;
-      } 
+      }
     }
 
     .signup {
@@ -74,7 +74,7 @@ export const Container = styled.header`
     }
     .login {
       background-color: ${colors.light};
-      
+
       :active {
         transition: 0.001s;
         background-color: ${colors.dark};
@@ -83,3 +83,5 @@ export const Container = styled.header`
     }
   }
 `;
+
+export default Container;

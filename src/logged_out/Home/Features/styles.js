@@ -2,21 +2,21 @@ import styled from 'styled-components';
 
 import colors from '../../../styles/colors';
 
-export const Container = styled.section`
+const Container = styled.section`
   justify-content: center;
 
   h1 {
     color: ${colors.main};
     font-size: 4rem;
     text-align: center;
-    cursor: default;    
+    cursor: default;
     margin: 2rem 0;
 
     ::-moz-selection {
       color: ${colors.main};
       background: transparent;
     }
-  
+
     ::selection {
       color: ${colors.main};
       background: transparent;
@@ -29,3 +29,5 @@ export const Container = styled.section`
     background-color: ${colors.white};
   }
 `;
+
+export default Container;

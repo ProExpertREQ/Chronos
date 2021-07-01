@@ -1,11 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import { Container } from './styles';
+import Article from './styles';
 
-export default function Feature ({ description }) {
+export default function Feature({ description }) {
   return (
-    <Container>
+    <Article>
       <p>{description}</p>
-    </Container>
+    </Article>
   );
 }
+
+Feature.propTypes = {
+  description: PropTypes.string.isRequired,
+};

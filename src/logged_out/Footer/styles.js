@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import colors from '../../styles/colors';
 
-export const Container = styled.footer`
+const Container = styled.footer`
   background-color: ${colors.main};
   display: flex;
   flex-direction: column;
@@ -69,7 +69,7 @@ export const Container = styled.footer`
       ::selection {
         color: ${colors.white};
         background: transparent;
-      } 
+      }
       svg {
         font-weight: 700;
         font-size: 2rem;
@@ -80,3 +80,5 @@ export const Container = styled.footer`
     }
   }
 `;
+
+export default Container;

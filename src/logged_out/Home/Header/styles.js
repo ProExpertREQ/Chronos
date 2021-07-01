@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import colors from '../../../styles/colors';
 
-export const Container = styled.section`
+const Section = styled.section`
   background-color: ${colors.main};
   display: flex;
   justify-content: space-between;
@@ -17,12 +17,12 @@ export const Container = styled.section`
       margin-top: -2.5rem;
       font-size: 3.8rem;
     }
-    
+
     .item-2 {
       margin: -2rem;
       font-size: 5rem;
     }
-    
+
     .item-3 {
       font-size: 3rem;
     }
@@ -39,18 +39,18 @@ export const Container = styled.section`
     color: ${colors.white};
     font-weight: 800;
     text-align: center;
-    cursor: default;    
+    cursor: default;
 
     ::-moz-selection {
       color: ${colors.white};
       background: transparent;
     }
-  
+
     ::selection {
       color: ${colors.white};
       background: transparent;
     }
-  } 
+  }
 
   img {
     max-width: 37rem;
@@ -60,10 +60,10 @@ export const Container = styled.section`
     ::-moz-selection {
       background: transparent;
     }
-  
+
     ::selection {
       background: transparent;
-    } 
+    }
   }
 
   button {
@@ -88,16 +88,18 @@ export const Container = styled.section`
       transition: 0.001s;
       background-color: ${colors.dark};
       color: ${colors.white};
-    }   
+    }
 
     ::-moz-selection {
       color: ${colors.white};
       background: transparent;
     }
-  
+
     ::selection {
       color: ${colors.white};
       background: transparent;
-    } 
+    }
   }
 `;
+
+export default Section;

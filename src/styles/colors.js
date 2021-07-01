@@ -1,4 +1,4 @@
- const colors = {
+const colors = {
   light: '#89C8FF',
   main: '#3FB1B5',
   dark: '#184244',

@@ -8,9 +8,9 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Main /> 
+      <Main />
     </>
   );
-};
+}
 
 export default App;

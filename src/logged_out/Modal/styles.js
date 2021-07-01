@@ -52,11 +52,11 @@ const Modal = styled.div`
         color: ${colors.dark};
         background: transparent;
       }
-  
+
       ::selection {
         color: ${colors.dark};
         background: transparent;
-      } 
+      }
     }
   }
 
@@ -72,7 +72,7 @@ const Modal = styled.div`
       margin-top: .5rem;
     }
 
-    input { 
+    input {
       border: none;
       border-radius: .3rem;
       border: 1px solid ${colors.main};
@@ -90,16 +90,16 @@ const Modal = styled.div`
 
     #button-label {
       color: ${colors.white};
-      
+
       ::-moz-selection {
         color: ${colors.white};
         background: transparent;
       }
-  
+
       ::selection {
         color: ${colors.white};
         background: transparent;
-      } 
+      }
     }
   }
 `;
