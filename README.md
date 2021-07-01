@@ -69,7 +69,7 @@ Follow the instructions on the [chronos-server](https://github.com/ProExpertREQ/
 It should looks like this:
 
 
-SERVER_URL=http://localhost:9000/
+SERVER_URL=http://localhost:3080/
 
 
 ### Running
@@ -87,6 +87,12 @@ _or_
 ```
 $ npm run dev
 ```
+
+
+## Route
+
+
+The base URL is: http://localhost:9000/
 
 
 ## Built With
