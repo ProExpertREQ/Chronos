@@ -5,7 +5,7 @@ import Modal from '../Modal';
 import Button from './styles';
 
 const LoginDialog = ({ onClose = () => {} }) => (
-  <Modal title="Entrar" onClose={onClose}>
+  <Modal title="Entrar" id="modal" onClose={onClose}>
     <label htmlFor="email">E-mail</label>
     <input
       type="text"
