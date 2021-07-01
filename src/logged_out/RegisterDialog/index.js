@@ -5,7 +5,7 @@ import Modal from '../Modal';
 import Button from './styles';
 
 const RegisterDialog = ({ onClose = () => {} }) => (
-  <Modal title="Registrar" onClose={onClose}>
+  <Modal title="Registrar" id="modal" onClose={onClose}>
     <label htmlFor="name">Nome</label>
     <input
       type="text"
