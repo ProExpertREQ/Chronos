@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 import ModalStyled from './styles';
 
 const Modal = ({
-  title = '', id = 'modal', onClose = () => {}, children,
+  title = '',
+  id = '',
+  onClose = () => {}, children,
 }) => {
   const handleOutsideClick = (e) => {
     if (e.target.id === id) onClose();
