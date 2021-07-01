@@ -8,7 +8,7 @@ If you want to take a look on all screens of the App, they are [here](https://ww
 
 The idea of the App is:
 
-_Provide information about the platforms used by professors to communicate with students at the Universit of Brasília and about tools that will help them throughout the semesters._
+_Provide information about the platforms used by professors to communicate with students at the University of Brasília and about tools that will help them throughout the semesters._
 
 
 ## Why?
