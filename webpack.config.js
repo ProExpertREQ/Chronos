@@ -1,6 +1,6 @@
-const path = require ('path');
-const HtmlWebpackPlugin = require ('html-webpack-plugin');
-const { CleanWebpackPlugin } = require ('clean-webpack-plugin');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -10,7 +10,7 @@ module.exports = {
     filename: 'bundle[fullhash].js',
   },
   plugins: [
-    new HtmlWebpackPlugin ({
+    new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public', 'index.html'),
     }),
     new CleanWebpackPlugin(),
@@ -23,9 +23,9 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
-          }
-        }
+            presets: ['@babel/preset-env'],
+          },
+        },
       },
       {
         test: /\.(png|jp(e*)g|svg|gif)$/,
@@ -47,5 +47,5 @@ module.exports = {
     stats: 'errors-warnings',
     open: true,
     overlay: true,
-  }
+  },
 };
