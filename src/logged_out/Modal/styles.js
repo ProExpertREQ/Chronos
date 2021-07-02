@@ -88,18 +88,9 @@ const Modal = styled.div`
       }
     }
 
-    #button-label {
-      color: ${colors.white};
-
-      ::-moz-selection {
-        color: ${colors.white};
-        background: transparent;
-      }
-
-      ::selection {
-        color: ${colors.white};
-        background: transparent;
-      }
+    .error {
+      color: ${colors.red};
+      font-weight: 400;
     }
   }
 `;
