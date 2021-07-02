@@ -8,6 +8,8 @@ const Button = styled.button`
   color: ${colors.white};
   transition: .3s;
   background-color: ${colors.light};
+  width: 100%;
+  margin-top: 1rem;
 
   :active {
     background-color: ${colors.dark};
@@ -15,6 +17,7 @@ const Button = styled.button`
   }
 
   :hover {
+    transform: scale(1.01) !important;
     color: ${colors.dark};
   }
 
