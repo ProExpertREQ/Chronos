@@ -1,30 +1,44 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Formik, Form } from 'formik';
+import * as Yup from 'yup';
 
+import TextInput from '../components/TextInput';
 import Modal from '../Modal';
 import Button from './styles';
 
 const LoginDialog = ({ onClose = () => {} }) => (
   <Modal title="Entrar" id="modal" onClose={onClose}>
-    <label htmlFor="email">E-mail</label>
-    <input
-      type="text"
-      name="email"
-      id="email"
-      placeholder="Digite seu e-mail"
-      autoComplete="off"
-    />
-
-    <label htmlFor="password">Senha</label>
-    <input
-      type="password"
-      name="password"
-      id="password"
-      placeholder="Digite sua senha"
-    />
-
-    <label id="button-label">|</label>
-    <Button id="login">Entrar</Button>
+    <Formik
+      initialValues={{
+        email: '',
+        password: '',
+        acceptedTerms: false, // added for our checkbox
+        jobType: '', // added for our select
+      }}
+      onSubmit={(values, { setSubmitting }) => {
+        setSubmitting(false);
+      }}
+    >
+      <Form>
+        <TextInput
+          label="E-mail"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Digite seu e-mail"
+          autoComplete="off"
+        />
+        <TextInput
+          label="Senha"
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Sua senha"
+        />
+        <Button type="submit">Entrar</Button>
+      </Form>
+    </Formik>
   </Modal>
 );
 
