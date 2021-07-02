@@ -8,6 +8,8 @@ const Button = styled.button`
   color: ${colors.white};
   transition: .3s;
   background-color: ${colors.yellow};
+  margin-top: 1rem;
+  width: 100%;
 
   :active {
     background-color: ${colors.dark};
@@ -16,6 +18,7 @@ const Button = styled.button`
 
   :hover {
     color: ${colors.dark};
+    transform: scale(1.01) !important;
   }
 
   ::-moz-selection {
