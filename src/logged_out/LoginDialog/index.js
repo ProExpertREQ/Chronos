@@ -5,16 +5,19 @@ import { Formik, Form } from 'formik';
 import TextInput from '../components/TextInput';
 import Modal from '../Modal';
 import Button from './styles';
+import validationSchema from './validationSchema';
 
-const LoginDialog = ({ onClose }) => (
+const LoginDialog = ({ onClose, onSubmit }) => (
   <Modal title="Entrar" id="modal" onClose={onClose}>
     <Formik
       initialValues={{
         email: '',
         password: '',
       }}
+      validationSchema={validationSchema}
       onSubmit={(values, { setSubmitting }) => {
         setSubmitting(false);
+        onSubmit(values);
       }}
     >
       <Form>
@@ -41,6 +44,7 @@ const LoginDialog = ({ onClose }) => (
 
 LoginDialog.propTypes = {
   onClose: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
 };
 
 export default LoginDialog;
