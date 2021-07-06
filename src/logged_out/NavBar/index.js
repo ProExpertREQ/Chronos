@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 
 import Container from './styles';
 
 import RegisterDialog from '../RegisterDialog';
 import LoginDialog from '../LoginDialog';
 
+import { Context } from '../../Context/AuthContext';
+
 export default function NavBar() {
   const [isRegisterDialogVisible, setIsRegisterDialogVisible] = useState(false);
   const [isLoginDialogVisible, setIsLoginDialogVisible] = useState(false);
+  const { handleLogin } = useContext(Context);
 
   return (
     <Container>
@@ -36,7 +39,12 @@ export default function NavBar() {
       }
       {
         isLoginDialogVisible
-          ? <LoginDialog onClose={() => setIsLoginDialogVisible(false)} />
+          ? (
+            <LoginDialog
+              onClose={() => setIsLoginDialogVisible(false)}
+              onSubmit={handleLogin}
+            />
+          )
           : null
       }
     </Container>
