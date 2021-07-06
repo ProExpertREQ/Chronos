@@ -14,7 +14,7 @@ const schema = Yup.object().shape({
   email: Yup.string()
     .email('Esse e-mail não é válido =(')
     .required('Você usará esse e-mail para se conectar.'),
-  registrationNumber: Yup.string()
+  registration_number: Yup.string()
     .min(9, 'Sua matrícula deve ter nove dígitos.')
     .max(9, 'Sua matrícula deve ter nove dígitos.')
     .required('Insira sua matrícula.'),
@@ -23,20 +23,19 @@ const schema = Yup.object().shape({
     .max(50, 'Sua senha deve ter no máximo 50 caracteres.')
     .required('Insira uma combinação de pelo menos cinco letras, sinais de pontuação ou símbolos(como ! e &).'),
   passwordConfirm: Yup.string()
-    .oneOf([Yup.ref('password'), null], 'As senhas devem ser iguais.'),
+    .oneOf([Yup.ref('password'), null], 'As senhas devem ser iguais.')
+    .required('Você precisa confirmar sua senha.'),
 });
 
-const RegisterDialog = ({ onClose = () => {} }) => (
+const RegisterDialog = ({ onClose }) => (
   <Modal title="Registrar" id="modal" onClose={onClose}>
     <Formik
       initialValues={{
         name: '',
         email: '',
-        registrationNumber: '',
+        registration_number: '',
         password: '',
         passwordConfirm: '',
-        acceptedTerms: false, // added for our checkbox
-        jobType: '', // added for our select
       }}
       validationSchema={schema}
       onSubmit={(values, { setSubmitting }) => {
@@ -63,8 +62,8 @@ const RegisterDialog = ({ onClose = () => {} }) => (
         <TextInput
           label="Matrícula*"
           type="text"
-          name="registrationNumber"
-          id="registrationNumber"
+          name="registration_number"
+          id="registration_number"
           placeholder="21/0419620"
           autoComplete="off"
         />
