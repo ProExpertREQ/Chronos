@@ -1,20 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Formik, Form } from 'formik';
-import * as Yup from 'yup';
 
 import TextInput from '../components/TextInput';
 import Modal from '../Modal';
 import Button from './styles';
 
-const LoginDialog = ({ onClose = () => {} }) => (
+const LoginDialog = ({ onClose }) => (
   <Modal title="Entrar" id="modal" onClose={onClose}>
     <Formik
       initialValues={{
         email: '',
         password: '',
-        acceptedTerms: false, // added for our checkbox
-        jobType: '', // added for our select
       }}
       onSubmit={(values, { setSubmitting }) => {
         setSubmitting(false);
