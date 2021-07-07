@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useContext } from 'react';
 
-import api from '../api';
+import Load from '../shared/Load';
+import api from '../services/api';
 import { Context } from '../Context/AuthContext';
 
 export default function Main() {
   const [users, setUsers] = useState([]);
-  const { handleLogout } = useContext(Context);
+  const { loading, handleLogout, authenticated } = useContext(Context);
 
   useEffect(() => {
     (async () => {
@@ -13,10 +14,11 @@ export default function Main() {
 
       setUsers(data);
     })();
-  }, []);
+  }, [authenticated]);
 
   return (
     <>
+      {loading ? <Load /> : null}
       <h1>Estou logado</h1>
       <ul>
         {users.map((user) => (
