@@ -8,7 +8,7 @@ const Modal = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 10;
   background-color: rgba(24, 66, 68, .8);
   display: flex;
   justify-content: center;

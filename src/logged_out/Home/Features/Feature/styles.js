@@ -21,7 +21,7 @@ const Article = styled.article`
 
   p {
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     font-weight: 500;
     color: ${colors.white};
     cursor: default;

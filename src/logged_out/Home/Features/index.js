@@ -9,7 +9,7 @@ import WaveBorder from './Wave';
 export default function Features() {
   return (
     <Container id="features">
-      <h1>Features</h1>
+      <h1>Como iremos te ajudar?</h1>
       <div className="row">
         {features.map((feature) => (
           <Feature

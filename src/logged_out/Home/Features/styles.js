@@ -25,6 +25,8 @@ const Container = styled.section`
 
   .row {
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0 5rem 6rem 5rem;
     background-color: ${colors.white};
   }
