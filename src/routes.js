@@ -8,13 +8,9 @@ import Logged from './logged_in/Main';
 
 // eslint-disable-next-line react/prop-types
 function CustomRoute({ isPrivate, ...rest }) {
-  const { loading, authenticated } = useContext(Context);
+  const { authenticated, loading } = useContext(Context);
 
-  if (loading) {
-    return <h1>LOADING...</h1>;
-  }
-
-  if (isPrivate && !authenticated) {
+  if (isPrivate && !authenticated && !loading) {
     return <Redirect to="/" />;
   }
 
@@ -30,8 +26,8 @@ export default function Routes() {
         component={Home}
       />
       <CustomRoute
-        isPrivate
         exact
+        isPrivate
         path="/users"
         component={Logged}
       />
