@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
-import api from '../../api';
-import history from '../../history';
+import api from '../../services/api';
+import history from '../../services/history';
 
 export default function useAuth() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -15,7 +15,9 @@ export default function useAuth() {
       setAuthenticated(true);
     }
 
-    setLoading(false);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1893);
   }, []);
 
   async function handleLogin(values) {
