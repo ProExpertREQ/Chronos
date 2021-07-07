@@ -1,14 +1,14 @@
 export default [
   {
     id: 0,
-    description: 'Você encontrará onde o professor ministrará as aulas, onde disponibilizará os materiais, quais os canais de comunicação com a turma',
+    description: 'Adicione as matérias que serão cursadas e te ajudaremos a organizar o seu semestre.',
   },
   {
     id: 1,
-    description: 'Ajudaremos você a organizar o seu semestre, disponibilizando todas as informações das matérias que você está cursando',
+    description: 'Informe-se sobre as turmas, os professores e as plataformas de ensino usadas por ele.',
   },
   {
     id: 2,
-    description: 'Você também poderá marcar as suas faltas e iremos te avisar quando não poder faltar mais, sem  correr risco de perder todo o semestre',
+    description: 'Avise-nos quando faltar e te avisaremos quando não poder faltar mais.',
   },
 ];
