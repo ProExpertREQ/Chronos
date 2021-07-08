@@ -68,7 +68,7 @@ const Section = styled.section`
 
   button {
     padding: 0.4rem 3rem;
-    border-radius: 0.9rem;
+    border-radius: 0.5rem;
     background-color: ${colors.dark};
     font-family: 'Baloo Tamma 2', cursive;
     font-weight: 700;

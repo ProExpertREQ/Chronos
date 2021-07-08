@@ -7,7 +7,7 @@ const Article = styled.article`
   justify-content: center;
   align-items: center;
   background-color: ${colors.main};
-  border-radius: 2rem;
+  border-radius: 1rem;
   padding: 1.4rem;
   transition: 0.5s;
 

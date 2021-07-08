@@ -33,14 +33,14 @@ const Container = styled.header`
     align-items: stretch;
 
     button {
-      padding: 0.4rem 3rem;
-      border-radius: 0.9rem;
+      padding: .4rem 3rem;
+      border-radius: .5rem;
       font-family: 'Baloo Tamma 2', cursive;
       font-weight: 700;
       font-size: 1.5rem;
       color: ${colors.white};
       border: none;
-      transition: 0.3s;
+      transition: .3s;
 
       :hover {
         transform: scale(1.05);

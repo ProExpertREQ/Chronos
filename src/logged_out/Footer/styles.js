@@ -15,6 +15,7 @@ const Container = styled.footer`
     margin: 0;
     text-align: center;
     font-weight: 500;
+    font-size: .8rem;
   }
 
   .about {
@@ -22,16 +23,16 @@ const Container = styled.footer`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 
     .about-text {
-      font-size: 1.2rem;
+      font-size: 1rem;
       margin: -.3rem 0 1rem 0;
     }
 
     h2 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 1.5rem;
       text-align: center;
     }
 
@@ -40,15 +41,15 @@ const Container = styled.footer`
       justify-content: center;
       align-items: center;
 
-      padding: .4rem 3rem;
-      border-radius: .9rem;
+      padding: .4rem 2rem;
+      border-radius: .5rem;
       background-color: ${colors.dark};
       border: none;
       transition: 0.3s;
 
       p {
         font-weight: 700;
-        font-size: 1.5rem;
+        font-size: 1rem;
         color: ${colors.white};
         font-family: 'Baloo Tamma 2', cursive;
       }
@@ -72,7 +73,7 @@ const Container = styled.footer`
       }
       svg {
         font-weight: 700;
-        font-size: 2rem;
+        font-size: 1.2rem;
         margin-right: .5rem;
         color: ${colors.white};
         font-family: 'Baloo Tamma 2', cursive;
