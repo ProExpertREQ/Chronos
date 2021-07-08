@@ -6,6 +6,7 @@ import history from '../../services/history';
 export default function useAuth() {
   const [authenticated, setAuthenticated] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(undefined);
 
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -17,23 +18,27 @@ export default function useAuth() {
 
     setTimeout(() => {
       setLoading(false);
-    }, 1893);
+    }, 2000);
   }, []);
 
   async function handleLogin(values) {
-    const { data: { token } } = await api
-      .post('/users/login', {
-        email: values.email,
-        password: values.password,
-      });
+    const response = await api
+      .post('/users/login', values)
+      .catch((err) => err.response.data.error);
 
-    localStorage.setItem('token', JSON.stringify(token));
+    if (response.data) {
+      const { token } = response.data;
 
-    api.defaults.headers.Authorization = `Bearer ${token}`;
+      localStorage.setItem('token', JSON.stringify(token));
 
-    setAuthenticated(true);
+      api.defaults.headers.Authorization = `Bearer ${token}`;
 
-    history.push('/users');
+      setAuthenticated(true);
+
+      history.push('/users');
+    } else {
+      setError(response);
+    }
   }
 
   async function handleLogout() {
@@ -47,6 +52,6 @@ export default function useAuth() {
   }
 
   return {
-    authenticated, loading, handleLogin, handleLogout,
+    authenticated, loading, handleLogin, handleLogout, error,
   };
 }
