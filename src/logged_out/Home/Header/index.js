@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Section from './styles';
-import Illustration from '../../../../public/img/studying.svg';
+import Illustration from '../../../assets/img/studying.svg';
 
 export default function Home() {
   return (
