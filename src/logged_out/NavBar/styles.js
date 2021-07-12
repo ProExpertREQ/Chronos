@@ -9,6 +9,8 @@ const Container = styled.header`
   align-items: center;
   padding: 0 5rem;
   padding-top: 2rem;
+  position: absolute;
+  width: -webkit-fill-available;
 
   h1 {
     margin: 0 0 -0.5rem 0;
@@ -16,6 +18,7 @@ const Container = styled.header`
     font-weight: 700;
     color: ${colors.dark};
     cursor: default;
+    width: 100%;
 
     ::-moz-selection {
       color: ${colors.dark};
