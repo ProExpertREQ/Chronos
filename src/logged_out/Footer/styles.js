@@ -36,10 +36,11 @@ const Container = styled.footer`
       text-align: center;
     }
 
-    button {
+    a {
       display: flex;
       justify-content: center;
       align-items: center;
+      text-decoration: none;
 
       padding: .4rem 2rem;
       border-radius: .5rem;
