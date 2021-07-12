@@ -17,10 +17,10 @@ export default function Footer() {
           dedicados da Engenharia de Software da Universidade de Brasília.
         </p>
 
-        <button type="button">
+        <a href="https://github.com/ProExpertREQ">
           <FontAwesomeIcon icon={faGithub} />
           <p>Nosso Repositório</p>
-        </button>
+        </a>
       </div>
       <p>© 2021 Chronos</p>
     </Container>
