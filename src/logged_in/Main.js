@@ -10,9 +10,10 @@ export default function Main() {
 
   useEffect(() => {
     (async () => {
-      const { data } = await api.get('users/get-all');
-
-      setUsers(data);
+      if (authenticated) {
+        const { data } = await api.get('users/get-all');
+        setUsers(data);
+      }
     })();
   }, [authenticated]);
 
