@@ -6,7 +6,7 @@ import history from '../../services/history';
 export default function useAuth() {
   const [authenticated, setAuthenticated] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(undefined);
+  const [error, setError] = useState();
 
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -36,6 +36,8 @@ export default function useAuth() {
       setAuthenticated(true);
 
       history.push('/users');
+
+      history.go(0);
     } else {
       setError(response);
     }
@@ -49,6 +51,8 @@ export default function useAuth() {
     api.defaults.headers.Authorization = undefined;
 
     history.push('/');
+
+    history.go(0);
   }
 
   return {
