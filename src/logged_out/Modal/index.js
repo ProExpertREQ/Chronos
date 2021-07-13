@@ -1,5 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+
+import hiddenOverflow from '../../shared/utils/hiddenOverflow';
 
 import ModalStyled from './styles';
 
@@ -12,12 +14,7 @@ const Modal = ({
     if (e.target.id === id) onClose();
   };
 
-  useEffect(() => {
-    document.body.style.overflow = 'hidden';
-
-    // eslint-disable-next-line no-return-assign
-    return () => document.body.style.overflow = 'unset';
-  }, []);
+  hiddenOverflow();
 
   return (
     <ModalStyled id={id} onClick={handleOutsideClick}>
