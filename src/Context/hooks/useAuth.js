@@ -55,7 +55,20 @@ export default function useAuth() {
     history.go(0);
   }
 
+  async function handleRegister(values) {
+    const response = await api
+      .post('/users/create', values)
+      .catch((err) => err.response.data.errors[0]);
+
+    if (response.data) {
+      const { email, password } = values;
+      handleLogin({ email, password });
+    } else {
+      setError(response);
+    }
+  }
+
   return {
-    authenticated, loading, handleLogin, handleLogout, error,
+    authenticated, loading, handleLogin, handleLogout, error, handleRegister,
   };
 }
