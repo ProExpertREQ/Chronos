@@ -7,13 +7,13 @@ const Context = createContext();
 
 function AuthProvider({ children }) {
   const {
-    authenticated, loading, handleLogin, handleLogout, error,
+    authenticated, loading, handleRegister, handleLogin, handleLogout, error,
   } = useAuth();
 
   return (
     <Context.Provider
       value={{
-        authenticated, loading, handleLogin, handleLogout, error,
+        authenticated, loading, handleRegister, handleLogin, handleLogout, error,
       }}
     >
       {children}

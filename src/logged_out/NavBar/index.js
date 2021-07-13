@@ -10,7 +10,7 @@ import { Context } from '../../Context/AuthContext';
 export default function NavBar() {
   const [isRegisterDialogVisible, setIsRegisterDialogVisible] = useState(false);
   const [isLoginDialogVisible, setIsLoginDialogVisible] = useState(false);
-  const { handleLogin } = useContext(Context);
+  const { handleLogin, handleRegister } = useContext(Context);
 
   return (
     <Container>
@@ -34,7 +34,12 @@ export default function NavBar() {
       </div>
       {
         isRegisterDialogVisible
-          ? <RegisterDialog onClose={() => setIsRegisterDialogVisible(false)} />
+          ? (
+            <RegisterDialog
+              onClose={() => setIsRegisterDialogVisible(false)}
+              onSubmit={handleRegister}
+            />
+          )
           : null
       }
       {

@@ -14,7 +14,7 @@ const validationSchema = Yup.object().shape({
   password: Yup.string()
     .min(5, 'Sua senha deve ter pelo menos cinco caracteres.')
     .max(50, 'Sua senha deve ter no máximo 50 caracteres.')
-    .required('Insira uma combinação de pelo menos cinco letras, sinais de pontuação ou símbolos(como ! e &).'),
+    .required('Insira uma combinação de pelo menos cinco caracteres.'),
   passwordConfirm: Yup.string()
     .oneOf([Yup.ref('password'), null], 'As senhas devem ser iguais.')
     .required('Você precisa confirmar sua senha.'),
