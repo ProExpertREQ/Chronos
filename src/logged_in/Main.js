@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react';
 
-import Load from '../shared/Load';
 import api from '../services/api';
 import { Context } from '../Context/AuthContext';
+
+import Load from '../shared/Load';
+import SideMenu from './components/SideMenu';
 
 export default function Main() {
   const [users, setUsers] = useState([]);
@@ -20,6 +22,7 @@ export default function Main() {
   return (
     <>
       {loading ? <Load /> : null}
+      <SideMenu />
       <h1>Estou logado</h1>
       <ul>
         {users.map((user) => (
