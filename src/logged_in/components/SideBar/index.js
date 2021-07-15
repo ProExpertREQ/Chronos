@@ -1,8 +1,5 @@
 import React from 'react';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-
 import SideMenu from './styles';
 
 const SideBar = () => (
@@ -12,7 +9,7 @@ const SideBar = () => (
         <h1>CHRONOS</h1>
       </div>
       <div className="toggle-menu-btn">
-        <FontAwesomeIcon icon={faGithub} />
+        <i className="bi bi-arrow-left-square-fill" />
       </div>
     </section>
   </SideMenu>

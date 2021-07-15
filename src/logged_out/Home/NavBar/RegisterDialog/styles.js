@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
-import colors from '../../styles/colors';
+import colors from '../../../../styles/colors';
 
 const Button = styled.button`
   border-radius: .3rem !important;
   font-size: 1.5rem !important;
   color: ${colors.white};
   transition: .3s;
-  background-color: ${colors.light};
-  width: 100%;
+  background-color: ${colors.yellow};
   margin-top: 1rem;
+  width: 100%;
 
   :active {
     background-color: ${colors.dark};
@@ -17,8 +17,8 @@ const Button = styled.button`
   }
 
   :hover {
-    transform: scale(1.01) !important;
     color: ${colors.dark};
+    transform: scale(1.01) !important;
   }
 
   ::-moz-selection {

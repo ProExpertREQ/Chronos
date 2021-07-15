@@ -2,12 +2,12 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { Formik, Form } from 'formik';
 
-import TextInput from '../components/TextInput';
+import TextInput from '../TextInput';
 import Modal from '../Modal';
 import Button from './styles';
 import validationSchema from './validationSchema';
 
-import { Context } from '../../Context/AuthContext';
+import { Context } from '../../../../Context/AuthContext';
 
 const LoginDialog = ({ onClose, onSubmit }) => {
   const { error } = useContext(Context);
