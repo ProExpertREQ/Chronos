@@ -73,7 +73,7 @@ const Container = styled.footer`
       }
       i {
         font-size: 1.2rem;
-        margin-right: .5rem;
+        margin: .3rem .5rem 0 0;
         color: ${colors.white};
       }
     }
