@@ -7,28 +7,61 @@ const SideMenu = styled.section`
   top: 0;
   background-color: ${colors.main};
   width: 15rem;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 2rem 1rem;
+  transition: width .5s ease-in;
 
-  h1 {
-    margin: 0 0 -0.5rem 0;
-    font-size: 1.9rem;
-    font-weight: 700;
-    color: ${colors.dark};
-    cursor: default;
-    margin-top: 2rem;
+  &.inactive {
+    width: 5rem;
 
-    ::-moz-selection {
+    h1 {
+      color: transparent !important;
+    }
+  }
+
+  .top-section {
+    position: relative;
+    overflow: hidden;
+
+    h1 {
+      margin: 0;
+      font-size: 1.9rem;
+      font-weight: 700;
       color: ${colors.dark};
-      background: transparent;
+      display: inline-block;
     }
 
-    ::selection {
-      color: ${colors.dark};
-      background: transparent;
+    button {
+      background-color: transparent;
+      transition: .2s;
+
+      :hover {
+        cursor: pointer;
+        color: ${colors.dark};
+      }
+
+      :active {
+        color: ${colors.white};
+      }
     }
+
+    .toggle-menu-btn {
+      color: ${colors.white};
+      border: none;
+      font-size: 2rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    border-radius: 1px;
+    background-color: ${colors.white};
+    opacity: .5;
   }
 `;
 
