@@ -1,18 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import SideMenu from './styles';
 
-const SideBar = () => (
-  <SideMenu>
-    <section className="top-section">
-      <div className="logo">
+const SideBar = () => {
+  const [inactive, setInactive] = useState(false);
+
+  return (
+    <SideMenu className={inactive ? 'inactive' : ''}>
+      <section className="top-section">
         <h1>CHRONOS</h1>
-      </div>
-      <div className="toggle-menu-btn">
-        <i className="bi bi-arrow-left-square-fill" />
-      </div>
-    </section>
-  </SideMenu>
-);
+        <button
+          onClick={() => setInactive(!inactive)}
+          type="button"
+          className="toggle-menu-btn"
+        >
+          {inactive
+            ? <i className="bi bi-arrow-right-square-fill" />
+            : <i className="bi bi-arrow-left-square-fill" />}
+        </button>
+      </section>
+
+      <div className="divider" />
+    </SideMenu>
+  );
+};
 
 export default SideBar;
