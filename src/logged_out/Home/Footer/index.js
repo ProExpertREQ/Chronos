@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import Container from './styles';
 
 export default function Footer() {
@@ -18,7 +16,7 @@ export default function Footer() {
         </p>
 
         <a href="https://github.com/ProExpertREQ">
-          <FontAwesomeIcon icon={faGithub} />
+          <i className="bi bi-github" />
           <p>Nosso Repositório</p>
         </a>
       </div>

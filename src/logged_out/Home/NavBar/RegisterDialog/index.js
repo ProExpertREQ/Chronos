@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import { Formik, Form } from 'formik';
 
 import Modal from '../Modal';
-import TextInput from '../components/TextInput';
+import TextInput from '../TextInput';
 import Button from './styles';
 import validationSchema from './validationSchema';
 
-import { Context } from '../../Context/AuthContext';
+import { Context } from '../../../../Context/AuthContext';
 
 const RegisterDialog = ({ onClose, onSubmit }) => {
   const { error } = useContext(Context);

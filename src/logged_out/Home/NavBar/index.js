@@ -2,10 +2,10 @@ import React, { useState, useContext } from 'react';
 
 import Container from './styles';
 
-import RegisterDialog from '../RegisterDialog';
-import LoginDialog from '../LoginDialog';
+import RegisterDialog from './RegisterDialog';
+import LoginDialog from './LoginDialog';
 
-import { Context } from '../../Context/AuthContext';
+import { Context } from '../../../Context/AuthContext';
 
 export default function NavBar() {
   const [isRegisterDialogVisible, setIsRegisterDialogVisible] = useState(false);

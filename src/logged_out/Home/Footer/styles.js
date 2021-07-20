@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 
-import colors from '../../styles/colors';
+import colors from '../../../styles/colors';
 
 const Container = styled.footer`
   background-color: ${colors.main};
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   font-family: 'Baloo Tamma 2', cursive;
   color: ${colors.white};
@@ -72,12 +71,10 @@ const Container = styled.footer`
         color: ${colors.white};
         background: transparent;
       }
-      svg {
-        font-weight: 700;
+      i {
         font-size: 1.2rem;
-        margin-right: .5rem;
+        margin: .3rem .5rem 0 0;
         color: ${colors.white};
-        font-family: 'Baloo Tamma 2', cursive;
       }
     }
   }

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import hiddenOverflow from '../../shared/utils/hiddenOverflow';
+import hiddenOverflow from '../../../../shared/utils/hiddenOverflow';
 
 import ModalStyled from './styles';
 

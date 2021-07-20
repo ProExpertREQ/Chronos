@@ -11,7 +11,7 @@ function CustomRoute({ isPrivate, ...rest }) {
   const { authenticated, loading } = useContext(Context);
 
   if (isPrivate && !authenticated && !loading) {
-    return <Redirect to="/" />;
+    return <Redirect to="/home" />;
   }
 
   return <Route {...rest} />;
@@ -26,9 +26,8 @@ export default function Routes() {
         component={Home}
       />
       <CustomRoute
-        exact
         isPrivate
-        path="/users"
+        path="/minhas-turmas"
         component={Logged}
       />
     </Switch>
