@@ -22,12 +22,12 @@ export default function Routes() {
     <Switch>
       <CustomRoute
         exact
-        path="/home"
+        path="/"
         component={Home}
       />
       <CustomRoute
         isPrivate
-        path="/"
+        path="/minhas-turmas"
         component={Logged}
       />
     </Switch>
