@@ -20,16 +20,16 @@ const SideMenu = styled.section`
     }
 
     .top-section i {
-      color: ${colors.dark};
+      color: ${colors.white};
       transition: .5s;
 
       :hover {
         cursor: pointer;
-        color: ${colors.white};
+        color: ${colors.dark};
       }
 
       :active {
-        color: ${colors.dark};
+        color: ${colors.white};
       }
     }
 
@@ -64,16 +64,16 @@ const SideMenu = styled.section`
 
       :hover {
         cursor: pointer;
-        color: ${colors.dark};
+        color: ${colors.white};
       }
 
       :active {
-        color: ${colors.white};
+        color: ${colors.dark};
       }
     }
 
     .toggle-menu-btn {
-      color: ${colors.white};
+      color: ${colors.dark};
       border: none;
       font-size: 2rem;
       position: absolute;
@@ -91,18 +91,21 @@ const SideMenu = styled.section`
   }
 
   .main-menu {
+    position: relative;
+    overflow: hidden;
+
     ul {
       padding: 0;
       list-style-type: none;
 
       li {
         padding: 0 1rem;
-        border-radius: .3rem;
       }
 
-      .active {
+      .active{
         border-left: 2px solid ${colors.white};
         background-color: rgba(24,66,68,.3);
+        border-radius: .3rem;
         i, span {
           color: ${colors.dark};
         }
@@ -142,6 +145,7 @@ const SideMenu = styled.section`
     left: 0;
     padding: 2rem 1rem;
     box-sizing: border-box;
+    overflow: hidden;
 
     .avatar {
       width: 2.8rem;
