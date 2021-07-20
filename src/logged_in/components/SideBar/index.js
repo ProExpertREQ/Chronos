@@ -1,27 +1,32 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React, { useContext } from 'react';
 
 import SideMenu from './styles';
 import user from '../../../assets/img/avatar.png';
 import MenuItem from './MenuItem';
 
-const SideBar = ({ onColapse }) => {
-  const [inactive, setInactive] = useState(false);
+import { SidebarContext } from '../../../Context/SidebarContext';
 
-  useEffect(() => {
-    onColapse(inactive);
-  });
+const menuItems = [
+  { name: 'Minhas Turmas', icon: 'bi bi-grid-fill', to: '/minhas-turmas' },
+  { name: 'Departamentos', icon: 'bi bi-archive-fill', to: '/departamentos' },
+  { name: 'Cursos', icon: 'bi bi-collection-fill', to: '/cursos' },
+  { name: 'Matérias', icon: 'bi bi-file-earmark-text-fill', to: '/materias' },
+  { name: 'Turmas', icon: 'bi bi-people-fill', to: '/turmas' },
+];
+
+const SideBar = () => {
+  const { handleToggleSidebar, hiddenSidebar } = useContext(SidebarContext);
 
   return (
-    <SideMenu className={inactive ? 'inactive' : ''}>
+    <SideMenu className={hiddenSidebar ? 'inactive' : ''}>
       <section className="top-section">
         <h1>CHRONOS</h1>
         <button
-          onClick={() => setInactive(!inactive)}
+          onClick={handleToggleSidebar}
           type="button"
           className="toggle-menu-btn"
         >
-          {inactive
+          {hiddenSidebar
             ? <i className="bi bi-arrow-right-square-fill" />
             : <i className="bi bi-arrow-left-square-fill" />}
         </button>
@@ -31,36 +36,44 @@ const SideBar = ({ onColapse }) => {
 
       <section className="main-menu">
         <ul>
-          <MenuItem
+          {menuItems.map((menuItem) => (
+            <MenuItem
+              key={menuItem.name}
+              name={menuItem.name}
+              icon={menuItem.icon}
+              to={menuItem.to}
+            />
+          ))}
+          {/* <MenuItem
             title="Minhas turmas"
             href="minhas-turmas"
             icon="bi bi-grid-fill"
-            active={!inactive}
+            active={!hiddenSidebar}
           />
           <MenuItem
             title="Departamentos"
             href="departamentos"
             icon="bi bi-archive-fill"
-            active={inactive}
+            active={hiddenSidebar}
           />
           <MenuItem
             title="Cursos"
             href="cursos"
             icon="bi bi-collection-fill"
-            active={!inactive}
+            active={!hiddenSidebar}
           />
           <MenuItem
             title="Matérias"
             href="materias"
             icon="bi bi-file-earmark-text-fill"
-            active={!inactive}
+            active={!hiddenSidebar}
           />
           <MenuItem
             title="Turmas"
             href="turmas"
             icon="bi bi-people-fill"
-            active={!inactive}
-          />
+            active={!hiddenSidebar}
+          /> */}
         </ul>
       </section>
 
@@ -77,10 +90,6 @@ const SideBar = ({ onColapse }) => {
       </section>
     </SideMenu>
   );
-};
-
-SideBar.propTypes = {
-  onColapse: PropTypes.func.isRequired,
 };
 
 export default SideBar;
