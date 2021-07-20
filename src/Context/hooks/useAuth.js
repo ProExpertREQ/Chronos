@@ -35,7 +35,7 @@ export default function useAuth() {
 
       setAuthenticated(true);
 
-      history.push('/users');
+      history.push('/minhas-turmas');
 
       history.go(0);
     } else {
