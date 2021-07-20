@@ -1,24 +1,24 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const MenuItem = ({
-  title, href, icon, active,
+  name, to, icon,
 }) => (
-  <li className={active ? 'active' : ''}>
-    <a href={href} className="menu-item">
+  <NavLink to={to} className="menu-item">
+    <li>
       <div className="item-icon">
         <i className={icon} />
       </div>
-      <span>{title}</span>
-    </a>
-  </li>
+      <span>{name}</span>
+    </li>
+  </NavLink>
 );
 
 MenuItem.propTypes = {
-  title: PropTypes.string.isRequired,
-  href: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
-  active: PropTypes.bool.isRequired,
+  to: PropTypes.string.isRequired,
 };
 
 export default MenuItem;
