@@ -27,7 +27,7 @@ export default function Routes() {
       />
       <CustomRoute
         isPrivate
-        path="/minhas-turmas"
+        path="/perfil"
         component={Logged}
       />
     </Switch>
