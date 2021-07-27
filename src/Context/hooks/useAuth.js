@@ -27,15 +27,16 @@ export default function useAuth() {
       .catch((err) => err.response.data.error);
 
     if (response.data) {
-      const { token } = response.data;
+      const { token, userId } = response.data;
 
       localStorage.setItem('token', JSON.stringify(token));
+      localStorage.setItem('id', JSON.stringify(userId));
 
       api.defaults.headers.Authorization = `Bearer ${token}`;
 
       setAuthenticated(true);
 
-      history.push('/minhas-turmas');
+      history.push('/perfil');
 
       history.go(0);
     } else {
@@ -47,6 +48,8 @@ export default function useAuth() {
     setAuthenticated(false);
 
     localStorage.removeItem('token');
+    localStorage.removeItem('userId');
+    localStorage.removeItem('sidebarHidden');
 
     api.defaults.headers.Authorization = undefined;
 
