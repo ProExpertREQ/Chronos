@@ -13,6 +13,7 @@ import Departments from './components/pages/Departments';
 import Courses from './components/pages/Courses';
 import Subjects from './components/pages/Subjects';
 import Classes from './components/pages/Classes';
+import User from './components/pages/User';
 
 import { SidebarContext } from '../Context/SidebarContext';
 
@@ -49,6 +50,11 @@ export default function Main() {
               exact
               path="/turmas"
               component={Classes}
+            />
+            <Route
+              exact
+              path="/perfil"
+              component={User}
             />
           </Switch>
         </div>
