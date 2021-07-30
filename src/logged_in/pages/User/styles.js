@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import colors from '../../../../styles/colors';
+import colors from '../../../styles/colors';
 
 export const Container = styled.div`
   background-color: white;
@@ -62,7 +62,7 @@ export const Container = styled.div`
     max-width: 500px;
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 30px;
   }
 
   button {
@@ -70,7 +70,7 @@ export const Container = styled.div`
     border: none;
     padding: .5rem;
     border-radius: 5px;
-    width: 100%;
+    width: 50%;
     font-family: 'Baloo Tamma 2', cursive;
     cursor: pointer;
     color: ${colors.white};
@@ -89,7 +89,7 @@ export const Container = styled.div`
 
   .delete {
     background-color: ${colors.red};
-    margin-left: 10px;
+    margin-left: 30px;
 
     &:hover {
       background-color: #fd2e1c;

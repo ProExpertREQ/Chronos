@@ -8,12 +8,12 @@ import {
 import Body from './styles';
 
 import SideBar from './components/SideBar';
-import MyClasses from './components/pages/MyClasses';
-import Departments from './components/pages/Departments';
-import Courses from './components/pages/Courses';
-import Subjects from './components/pages/Subjects';
-import Classes from './components/pages/Classes';
-import User from './components/pages/User';
+import MyClasses from './pages/MyClasses';
+import Departments from './pages/Departments';
+import Courses from './pages/Courses';
+import Subjects from './pages/Subjects';
+import Classes from './pages/Classes';
+import User from './pages/User';
 
 import { SidebarContext } from '../Context/SidebarContext';
 
