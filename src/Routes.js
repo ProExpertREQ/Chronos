@@ -11,7 +11,7 @@ function CustomRoute({ isPrivate, ...rest }) {
   const { authenticated, loading } = useContext(Context);
 
   if (isPrivate && !authenticated && !loading) {
-    return <Redirect to="/home" />;
+    return <Redirect to="/" />;
   }
 
   return <Route {...rest} />;
