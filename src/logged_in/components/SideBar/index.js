@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { NavLink } from 'react-router-dom';
 
 import SideMenu from './styles';
 import user from '../../../assets/img/avatar.png';
@@ -44,49 +45,21 @@ const SideBar = () => {
               to={menuItem.to}
             />
           ))}
-          {/* <MenuItem
-            title="Minhas turmas"
-            href="minhas-turmas"
-            icon="bi bi-grid-fill"
-            active={!hiddenSidebar}
-          />
-          <MenuItem
-            title="Departamentos"
-            href="departamentos"
-            icon="bi bi-archive-fill"
-            active={hiddenSidebar}
-          />
-          <MenuItem
-            title="Cursos"
-            href="cursos"
-            icon="bi bi-collection-fill"
-            active={!hiddenSidebar}
-          />
-          <MenuItem
-            title="Matérias"
-            href="materias"
-            icon="bi bi-file-earmark-text-fill"
-            active={!hiddenSidebar}
-          />
-          <MenuItem
-            title="Turmas"
-            href="turmas"
-            icon="bi bi-people-fill"
-            active={!hiddenSidebar}
-          /> */}
         </ul>
       </section>
 
       <div className="divider" />
 
       <section className="footer-menu">
-        <div className="avatar">
-          <img src={user} alt="User" />
-        </div>
-        <div className="user-info">
-          <h5>Douglas Castro</h5>
-          <p>douglas@email.com</p>
-        </div>
+        <NavLink to="/perfil" className="menu-item">
+          <div className="avatar">
+            <img src={user} alt="User" />
+          </div>
+          <div className="user-info">
+            <h5>Douglas Castro</h5>
+            <p>douglas@email.com</p>
+          </div>
+        </NavLink>
       </section>
     </SideMenu>
   );
