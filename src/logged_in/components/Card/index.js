@@ -12,9 +12,9 @@ export default function Card({ title, info, button }) {
       <div className="card-content">
         {info}
       </div>
-      <div className="card-footer">
-        {button}
-      </div>
+      <button type="button" className="card-footer">
+        <span>{button}</span>
+      </button>
     </Container>
   );
 }
