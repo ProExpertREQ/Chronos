@@ -11,9 +11,11 @@ const SideMenu = styled.section`
   box-sizing: border-box;
   padding: 2rem 1rem;
   transition: width .5s ease-in;
+  display: flex;
+  flex-direction: column;
 
   &.inactive {
-    width: 5rem;
+    width: 6rem;
 
     h1 {
       opacity: 0 !important;
@@ -22,6 +24,7 @@ const SideMenu = styled.section`
     .top-section i {
       color: ${colors.white};
       transition: .5s;
+      margin-right: .7rem;
 
       :hover {
         cursor: pointer;
@@ -47,6 +50,9 @@ const SideMenu = styled.section`
   .top-section {
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     h1 {
       margin: 0;
@@ -119,10 +125,11 @@ const SideMenu = styled.section`
       font-size: 1.3rem;
       text-decoration: none;
       margin: 1rem 0;
+      padding-top: .6rem;
 
       .item-icon {
         display: inline-block;
-        font-size: 1rem;
+        font-size: 1.5rem;
         margin-right: .5rem;
       }
 
@@ -148,8 +155,8 @@ const SideMenu = styled.section`
     overflow: hidden;
 
     .avatar {
-      width: 2.8rem;
-      height: 2.8rem;
+      width: 3rem;
+      height: 3rem;
       overflow: hidden;
       border-radius: 50%;
       border: 1px solid ${colors.yellow};
