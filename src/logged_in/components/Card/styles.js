@@ -25,9 +25,15 @@ export const Container = styled.div`
 
   .card-footer {
     background-color: ${colors.red};
-    color: ${colors.white};
     padding: .3rem 1.5rem;
     border-radius: .2rem;
-    font-size: .8rem;
+    border: none;
+    cursor: pointer;
+
+    span {
+      color: ${colors.white};
+      font-size: .8rem;
+      font-weight: 600;
+    }
   }
 `;
